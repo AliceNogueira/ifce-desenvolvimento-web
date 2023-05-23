@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+/*Edit*/
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+/*Backspace*/
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+/*Delete*/
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+}
+
+
+:root {
+    --color01: #ffd6d5;
+    --font-color01: white;
+    --main-font: Arial, Helvetica, sans-serif;
+}
+
+
+* {
+    font-family: var(--main-font);
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-size: 1em;
+    cursor: context-menu;
+}
+
+table {
+    width: 700px;
+    border-collapse: collapse;
+}
+
+caption {
+    background-color: rgb(132, 131, 131);
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 5px;
+    border: 2px solid black;
+    border-bottom: 0px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: lightgrey;
+}
+tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+th {
+    background-color: rgb(155, 155, 155);
+    border: 2px solid black;
+    padding: 2px;
+    position: sticky;
+    top: -1px;
+}
+
+th.r2 {
+    top: 21px;
+}
+
+td{
+    border: 2px solid black;
+    padding: 2px;
+}
+
+td.icon {
+    text-align: center;
+}
+
+td.icon span {
+    cursor: pointer;
+}
+

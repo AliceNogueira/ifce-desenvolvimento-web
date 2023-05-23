@@ -20,14 +20,10 @@ main.login .no-show{
     display: none;
 }
 
-main.login .pointer{
-    cursor: pointer;
-}
 
 main.login section.login-container {
-    background-color: white;
-    width: 390px;
-    min-height: 390px;
+    background-color: var(--font-color01);
+    width: clamp(250px, 50%, 390px);
     padding: 10px;
     border-radius: 1.5em;
 
@@ -92,7 +88,7 @@ main.login section.login-container section {
 
 
 main.login h2 {
-    font-size: 2em;
+    font-size: clamp(1.5em, 5vw, 2em);
     font-variant: small-caps;
     font-weight: bold;
     text-align: center;
@@ -110,8 +106,12 @@ main.login form > label::after {
     content: ":";
 }
 
+main.login input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="date"] {
+    cursor: text;
+}
+
 main.login form input, select {
-    background-color: rgba(211, 211, 211, 0.436);
+    background-color: rgba(211, 211, 211, 0.400);
     margin: 0 0 10px 0;
     padding: 5px;
     border-radius: .5em;

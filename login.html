@@ -12,13 +12,19 @@
     <div class="container">
         <header class="main-header">
             <section>
-                <a href="index.html"><img src="src/images/logo-500x200-B.png" alt="Logo" class="logo"></a>
+                <a href="index.html"><img src="src/images/logo-500x200-B.png" alt="Logo" class="logo pointer"></a>
             </section>
+
+            <input type="checkbox" name="aside-menu-button" id="aside-menu-button" class="aside-menu">
+            <label for="aside-menu-button" class="aside-menu pointer">
+                <span class="material-symbols-outlined aside-menu pointer">menu</span>
+            </label>
+
             <nav class="menu">
-                <a href="index.html">Home</a>
-                <a href="detalhes.html">Detalhes</a>
-                <a href="sobre.html">Sobre</a>
-                <a href="login.html">Login</a>
+                <a href="index.html" class="pointer">Home</a>
+                <a href="detalhes.html" class="pointer">Detalhes</a>
+                <a href="sobre.html" class="pointer">Sobre</a>
+                <a href="login.html" class="pointer">Login</a>
             </nav>
         </header>
         <main class="login">
@@ -28,16 +34,16 @@
 
                 <section class="login">
                     <h2>Login</h2>
-                    <form action="">
+                    <form action="" method="get">
                         <label for="l-email" class="no-show">E-mail</label>
-                        <input type="email" name="l-email" id="l-email" placeholder="E-mail" required>
+                        <input type="email" name="l-email" id="l-email" placeholder="E-mail" autocomplete="email" required>
                         
                         <label for="l-pwd" class="no-show">Senha</label>
-                        <input type="password" name="l-pwd" id="l-pwd" placeholder="Senha" required>
+                        <input type="password" name="l-pwd" id="l-pwd" placeholder="Senha" autocomplete="current-password" required>
                         
                         <div class="remember">
                             <input type="checkbox" name="l-remember" id="l-remember" class="pointer">
-                            <label for="l-remember">Lembrar</label>
+                            <label for="l-remember" class="pointer">Lembrar</label>
                         </div>
 
                         <button type="submit" name="l-submit-button" id="l-submit-button" class="submit-button pointer">Entrar</button>
@@ -46,23 +52,24 @@
 
                 <section class="register">
                     <h2>Cadastrar</h2>
-                    <form action="">
+                    <form action="" method="get">
                         <label for="r-name" class="no-show">Nome</label>
-                        <input type="text" name="r-name" id="r-name" placeholder="Nome" required>
+                        <input type="text" name="r-name" id="r-name" placeholder="Nome" autocomplete="given-name" required>
 
                         <label for="r-surname" class="no-show">Sobrenome</label>
-                        <input type="text" name="r-surname" id="r-surname" placeholder="Sobrenome" required>
+                        <input type="text" name="r-surname" id="r-surname" placeholder="Sobrenome" autocomplete="family-name" required>
+
                         <label for="r-email" class="no-show">E-mail</label>
-                        <input type="email" name="r-email" id="r-email" placeholder="E-mail" required>
+                        <input type="email" name="r-email" id="r-email" placeholder="E-mail" autocomplete="email" required>
                         
                         <label for="r-phone" class="no-show">Celular</label>
-                        <input type="tel" name="r-phone" id="r-phone" required placeholder="(xx) xxxxx-xxxx" pattern="([0-9]{2}) [0-9]{5} - [0-9]{4}">
+                        <input type="tel" name="r-phone" id="r-phone" placeholder="(xx) xxxxx-xxxx" pattern="([0-9]{2}) [0-9]{5} - [0-9]{4}" autocomplete="tel">
 
                         <label for="r-birth_date">Data de Nascimento</label>
-                        <input type="date" name="r-birth_date" id="r-birth_date" class="pointer">
+                        <input type="date" name="r-birth_date" id="r-birth_date" class="pointer" autocomplete="bday-day bday-month bday-year" required>
 
                         <label for="r-gender">Genero</label>
-                        <select name="r-gender" id="r-gender" class="pointer">
+                        <select name="r-gender" id="r-gender" class="pointer" required>
                             <optgroup label="Genero">
                                 <option value="f">Feminino</option>
                                 <option value="m">Masculino</option>
@@ -71,7 +78,7 @@
                         </select>
 
                         <label for="r-pwd" class="no-show">Senha</label>
-                        <input type="password" name="r-pwd" id="r-pwd" placeholder="Senha" required>
+                        <input type="password" name="r-pwd" id="r-pwd" placeholder="Senha" autocomplete="new-password" required>
 
                         <label for="r-pwd-confirmation" class="no-show">Confirme a Senha</label>
                         <input type="password" name="r-pwd-confirmation" id="r-pwd-confirmation" placeholder="Confirme a Senha" required>
@@ -81,7 +88,7 @@
             </section>
         </main>
         <footer class="main-footer">
-            <p><a href="sobre.html">Alice Nogueira</a></p>
+            <p><a href="sobre.html" class="pointer">Alice Nogueira</a></p>
         </footer>
     </div>
 </body>

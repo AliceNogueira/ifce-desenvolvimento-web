@@ -11,8 +11,13 @@
     }
 
 :root {
-    --color01: #ffd6d5;
+    --color01: #FBDFED;
+    --color02: #88ddfc;
+    --color03: #F8CEE4;
     --font-color01: white;
+    --shadow01: rgba(0, 0, 0, 0.050);
+    --shadow02: rgba(0, 0, 0, 0.100);
+    --shadow03: rgba(0, 0, 0, 0.200);
     --main-font: Arial, Helvetica, sans-serif;
 }
 
@@ -51,7 +56,7 @@ div.container {
     width: 100vw;
     min-height: 100vh;
     display: grid;
-    grid-template: 10vh 1fr 5vh / 1fr;
+    grid-template: max(10vh, 53px) 1fr max(5vh, 2rem) / 1fr;
     
 }
 
@@ -60,7 +65,7 @@ div.container {
 header
 */
 header.main-header {
-    background-color: rgba(0, 0, 0, 0.050);
+    background-color: var(--shadow01);
     padding-right: 20px;
     position: sticky;
     top: -1px;
@@ -86,7 +91,7 @@ header.main-header nav.menu, .main-header input#aside-menu-button {
 footer
 */
 footer.main-footer {
-    background-color: rgba(0, 0, 0, 0.200);
+    background-color: var(--shadow03);
     color: #ffffff;
     font-variant: small-caps;
     text-align: center;
@@ -98,7 +103,7 @@ footer.main-footer a {
 }
 
 /*Portrait*/
-@media screen and (max-aspect-ratio: 115/100) {
+@media screen and ((max-aspect-ratio: 115/100) or (max-width: 660px)) {
     /*Menu Lateral*/
     .main-header label.aside-menu {
         color: var(--font-color01);
@@ -109,7 +114,7 @@ footer.main-footer a {
     }
 
     .main-header label.aside-menu:hover {
-        background-color: rgba(0, 0, 0, 0.100);
+        background-color: var(--shadow02);
         transition: ease-in-out .5s;
     }
 
@@ -143,13 +148,13 @@ footer.main-footer a {
     }
 
     header.main-header nav.menu a:hover {
-        background-color: rgba(0, 0, 0, 0.100);
+        background-color: var(--shadow02);
     }
 
 }
 
 /*Landscape*/
-@media screen and (min-aspect-ratio: 115/100) {
+@media screen and (min-aspect-ratio: 115/100) and (min-width: 661px) {
     /*
     header
     */
@@ -172,7 +177,7 @@ footer.main-footer a {
     }
 
     header.main-header nav.menu a:hover {
-        background-color: rgba(0, 0, 0, 0.100);
+        background-color: var(--shadow02);
         transition: ease-in-out .5s;
     }
 

@@ -19,8 +19,13 @@
 
 
 :root {
-    --color01: #ffd6d5;
+    --color01: #FBDFED;
+    --color02: #88ddfc;
+    --color03: #F8CEE4;
     --font-color01: white;
+    --shadow01: rgba(0, 0, 0, 0.050);
+    --shadow02: rgba(0, 0, 0, 0.100);
+    --shadow03: rgba(0, 0, 0, 0.200);
     --main-font: Arial, Helvetica, sans-serif;
 }
 
@@ -34,14 +39,19 @@
     cursor: context-menu;
 }
 
+
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
 table {
     width: 700px;
     border-collapse: collapse;
 }
 
 caption {
-    background-color: rgb(132, 131, 131);
-    color: white;
+    background-color: var(--color03);
     font-size: 1.3em;
     font-weight: bold;
     padding: 5px;
@@ -57,7 +67,7 @@ tbody tr:nth-child(odd) {
 }
 
 th {
-    background-color: rgb(155, 155, 155);
+    background-color: var(--color01);
     border: 2px solid black;
     padding: 2px;
     position: sticky;

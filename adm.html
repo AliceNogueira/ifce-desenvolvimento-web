@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade de Desenvolvimento Web I</title>
+    <link rel="stylesheet" href="src/styles/header-footer.css">
+    <link rel="stylesheet" href="src/styles/adm.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <section>
+                <a href="index.html"><img src="src/images/logo-500x200-B.png" alt="Logo" class="logo pointer"></a>
+            </section>
+
+            <input type="checkbox" name="aside-menu-button" id="aside-menu-button" class="aside-menu">
+            <label for="aside-menu-button" class="aside-menu pointer">
+                <span class="material-symbols-outlined aside-menu pointer">menu</span>
+            </label>
+
+            <nav class="menu">
+                <a href="index.html" class="pointer">Home</a>
+                <a href="detalhes.html" class="pointer">Detalhes</a>
+                <a href="sobre.html" class="pointer">Sobre</a>
+                <a href="login.html" class="pointer">Login</a>
+                <a href="adm.html" class="pointer">Administrativo</a>
+            </nav>
+        </header>
+        <main class="adm">
+            <input type="checkbox" name="login-adm" id="login-adm-button">
+            <div class="login-adm">
+                <section class="login-adm">
+                    <h2>Login</h2>
+                    <form action="" method="get">
+                        <label for="l-email" class="no-show">E-mail</label>
+                        <input type="email" name="l-email" id="l-email" placeholder="E-mail" autocomplete="email" required>
+                        
+                        <label for="l-pwd" class="no-show">Senha</label>
+                        <input type="password" name="l-pwd" id="l-pwd" placeholder="Senha" autocomplete="current-password" required>
+                        
+                        <div class="remember">
+                            <input type="checkbox" name="l-remember" id="l-remember" class="pointer">
+                            <label for="l-remember" class="pointer">Lembrar</label>
+                        </div>
+
+                        <label for="login-adm-button" name="l-submit-button" id="l-submit-button" class="login-adm submit-button pointer">Entrar</label>
+                    </form>
+                </section>
+            </div>
+
+            <div class="page-adm">
+                <input type="radio" name="change-adm" id="users-table" checked>
+                <input type="radio" name="change-adm" id="products-table">
+                <input type="radio" name="change-adm" id="products-register">
+
+                <nav>
+                    <label for="users-table">Tabela&nbspde&nbspUsuarios</label>
+                    <label for="products-table">Tabela&nbspde&nbspProdutos</label>
+                    <label for="products-register">Cadastrar&nbspProdutos</label>
+                </nav>
+
+                <section class="users-table">
+                    <iframe src="tabela.html" frameborder="0">Tabela de Usuarios</iframe>
+                </section>
+                <section class="products-register">
+                    <h2>Cadastrar Produto</h2>
+                    <form action="" autocomplete="off">
+                        <label for="p-name">Nome</label>
+                        <input type="text" name="p-name" id="p-name" placeholder="Nome" required>
+                        <label for="p-type">Tipo</label>
+                        <input type="text" name="p-type" id="p-type" placeholder="Tipo" required>
+                        <label for="p-brand">Marca</label>
+                        <input type="text" name="p-brand" id="p-brad" placeholder="Marca" required>
+                        <label for="p-size" class="show">Tamanho</label>
+                        <select name="p-size" id="p-size">
+                            <option value="P">Pequeno</option>
+                            <option value="M" selected>Medio</option>
+                            <option value="G">Grande</option>
+                        </select>
+                        <label for="p-price">Preço</label>
+                        <input type="number" name="p-price" id="p-price" placeholder="Preço" required>
+                        <div class="register-products-buttons">
+                            <button type="reset">Apagar</button>
+                            <button type="submit">Cadastrar</button>
+                        </div>
+                    </form>
+                </section>
+                <section class="products-table">
+                    <table>
+                        <colgroup>
+                            <col class="p-id">
+                            <col class="p-name">
+                            <col class="p-type">
+                            <col class="p-brand">
+                            <col class="p-size">
+                            <col class="p-price">
+                            <col class="p-edit">
+                            <col class="p-erase">
+                        </colgroup>
+                        <caption>Tabela de Produtos</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Tipo</th>
+                                <th scope="col">Marca</th>
+                                <th scope="col">Tamanho</th>
+                                <th scope="col">Preço</th>
+                                <th scope="col">Editar</th>
+                                <th scope="col">Apagar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ID001</td>
+                                <td>Nome001</td>
+                                <td>Tipo001</td>
+                                <td>Marca001</td>
+                                <td class="p-size">M</td>
+                                <td class="p-price">00,00</td>
+                                <td class="icon"><span class="material-symbols-outlined">edit</span></td>
+                                <td class="icon"><span class="material-symbols-outlined">backspace</span></td>
+                            </tr>
+                            <tr>
+                                <td>ID002</td>
+                                <td>Nome002</td>
+                                <td>Tipo002</td>
+                                <td>Marca002</td>
+                                <td class="p-size">M</td>
+                                <td class="p-price">00,00</td>
+                                <td class="icon"><span class="material-symbols-outlined">edit</span></td>
+                                <td class="icon"><span class="material-symbols-outlined">backspace</span></td>
+                            </tr>
+                            <tr>
+                                <td>ID003</td>
+                                <td>Nome003</td>
+                                <td>Tipo003</td>
+                                <td>Marca003</td>
+                                <td class="p-size">M</td>
+                                <td class="p-price">00,00</td>
+                                <td class="icon"><span class="material-symbols-outlined">edit</span></td>
+                                <td class="icon"><span class="material-symbols-outlined">backspace</span></td>
+                            </tr>
+                            <tr>
+                                <td>ID004</td>
+                                <td>Nome004</td>
+                                <td>Tipo004</td>
+                                <td>Marca004</td>
+                                <td class="p-size">M</td>
+                                <td class="p-price">00,00</td>
+                                <td class="icon"><span class="material-symbols-outlined">edit</span></td>
+                                <td class="icon"><span class="material-symbols-outlined">backspace</span></td>
+                            </tr>
+                            <tr>
+                                <td>ID005</td>
+                                <td>Nome005</td>
+                                <td>Tipo005</td>
+                                <td>Marca005</td>
+                                <td class="p-size">M</td>
+                                <td class="p-price">00,00</td>
+                                <td class="icon"><span class="material-symbols-outlined">edit</span></td>
+                                <td class="icon"><span class="material-symbols-outlined">backspace</span></td>
+                            </tr>
+                            <tr>
+                                <td>ID006</td>
+                                <td>Nome006</td>
+                                <td>Tipo006</td>
+                                <td>Marca006</td>
+                                <td class="p-size">M</td>
+                                <td class="p-price">00,00</td>
+                                <td class="icon"><span class="material-symbols-outlined">edit</span></td>
+                                <td class="icon"><span class="material-symbols-outlined">backspace</span></td>
+                            </tr>
+                            <tr>
+                                <td>ID007</td>
+                                <td>Nome007</td>
+                                <td>Tipo007</td>
+                                <td>Marca007</td>
+                                <td class="p-size">M</td>
+                                <td class="p-price">00,00</td>
+                                <td class="icon"><span class="material-symbols-outlined">edit</span></td>
+                                <td class="icon"><span class="material-symbols-outlined">backspace</span></td>
+                            </tr>
+                            <tr>
+                                <td>ID008</td>
+                                <td>Nome008</td>
+                                <td>Tipo008</td>
+                                <td>Marca008</td>
+                                <td class="p-size">M</td>
+                                <td class="p-price">00,00</td>
+                                <td class="icon"><span class="material-symbols-outlined">edit</span></td>
+                                <td class="icon"><span class="material-symbols-outlined">backspace</span></td>
+                            </tr>
+                            <tr>
+                                <td>ID009</td>
+                                <td>Nome009</td>
+                                <td>Tipo009</td>
+                                <td>Marca009</td>
+                                <td class="p-size">M</td>
+                                <td class="p-price">00,00</td>
+                                <td class="icon"><span class="material-symbols-outlined">edit</span></td>
+                                <td class="icon"><span class="material-symbols-outlined">backspace</span></td>
+                            </tr>
+                            <tr>
+                                <td>ID010</td>
+                                <td>Nome010</td>
+                                <td>Tipo010</td>
+                                <td>Marca010</td>
+                                <td class="p-size">M</td>
+                                <td class="p-price">00,00</td>
+                                <td class="icon"><span class="material-symbols-outlined">edit</span></td>
+                                <td class="icon"><span class="material-symbols-outlined">backspace</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </main>
+        <footer class="main-footer">
+            <p><a href="sobre.html" class="pointer">Alice Nogueira</a></p>
+        </footer>
+    </div>
+</body>
+</html>

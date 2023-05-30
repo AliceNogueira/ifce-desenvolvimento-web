@@ -1,0 +1,365 @@
+@charset "UTF-8";
+
+:root {
+    --color01: #FBDFED;
+    --color02: #88ddfc;
+    --color03: #F8CEE4;
+    --font-color01: white;
+    --shadow01: rgba(0, 0, 0, 0.050);
+    --shadow02: rgba(0, 0, 0, 0.100);
+    --main-font: Arial, Helvetica, sans-serif;
+}
+
+
+/*
+Login Adm
+*/
+div.login-adm {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.login-adm section.login-adm {
+    background-color: var(--font-color01);
+    width: clamp(250px, 50%, 390px);
+    padding: 1rem;
+    border-radius: 1.5rem;
+
+    display: grid;
+    grid-template: 5em 1fr/ 80%;
+    justify-content: center;
+}
+
+/* Login */
+div.login-adm section.login-adm h2 {
+    font-size: clamp(1.5em, 5vw, 2em);
+    font-variant: small-caps;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    cursor: context-menu;
+}
+
+div.login-adm section.login-adm form {
+    padding: .5rem .5rem 4rem .5rem;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+div.login-adm section.login-adm form label, input[type="checkbox"] {
+    display: none;
+}
+
+div.login-adm section.login-adm input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="date"] {
+    cursor: text;
+}
+
+div.login-adm section.login-adm form input {
+    background-color: var(--shadow01);
+    margin: 0 0 .8rem 0;
+    padding: .4rem;
+    border-radius: .5rem;
+}
+
+div.login-adm section.login-adm form div.remember input + label::before {
+    color: transparent;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    font-size: .8em;
+    line-height: 1.1em;
+    content: "✓";
+    text-align: center;
+    border: 1px solid black;
+    margin-right: 10px;
+}
+
+div.login-adm section.login-adm form div.remember input:checked + label::before {
+    background-color: var(--color02);
+    color: var(--font-color01);
+}
+
+div.login-adm section.login-adm form div.remember label {
+    display: inline;
+}
+
+
+div.login-adm section.login-adm form label.submit-button {
+    background-color: var(--color01);
+    margin: 1rem 0;
+    padding: 10px;
+    border-radius: .5rem;
+
+    display: inline;
+    text-align: center;
+    border: 2px solid;
+    border-color: gray black black gray;
+}
+
+div.login-adm section.login-adm form label.submit-button:hover {
+    background-color: var(--color03);
+    color: var(--font-color01);
+}
+/*Login*/
+/*Login Adm*/
+
+
+
+
+
+div.page-adm {
+    background-color: var(--font-color01);
+    width: calc(100vw - 3rem);
+    max-width: 700px;
+    height: 700px;
+    margin: 0 auto;
+    padding: 1.5rem;
+
+    display: none;
+    flex-flow: column;
+    align-items: center;
+}
+
+div.page-adm nav {
+    background-color: var(--color02);
+    color: var(--font-color01);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5rem;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+div.page-adm nav label {
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+}
+
+div.page-adm nav label:hover {
+    background-color: var(--shadow02);
+}
+
+
+
+
+/*
+Users Table
+*/
+section.users-table {
+    background-color: var(--color01);
+    padding: 2rem 0;
+    box-shadow: .5px .5px 5px  inset black;
+    width: 90%;
+    height: 600px;
+    padding: 1em;
+    
+    display: none;
+    justify-content: center;
+}
+
+section.users-table iframe {
+    width: 100%;
+    height: 100%;
+    border: 1px inset white;
+}
+
+
+
+/*Users Table*/
+
+
+/*
+Products Table
+*/
+section.products-table {
+    background-color: var(--color01);
+    width: 90%;
+    padding: 2rem 1rem;
+    box-shadow: .5px .5px 5px  inset black;
+
+    display: none;
+    justify-content: center;
+    overflow: scroll;
+}
+
+section.products-table table {
+    border-collapse: collapse;
+}
+
+section.products-table table caption {
+    background-color: var(--color03);
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 5px;
+    border: 2px solid black;
+    border-bottom: 0px;
+}
+
+
+section.products-table table tbody tr:nth-child(even) {
+    background-color: lightgrey;
+}
+section.products-table table tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+section.products-table table th {
+    background-color: var(--color01);
+    border: 2px solid black;
+    padding: .3rem;
+    position: sticky;
+    top: -1px;
+}
+
+section.products-table table td{
+    border: 2px solid black;
+    padding: .2rem;
+}
+
+section.products-table table td.p-price {
+    text-align: right;
+}
+
+section.products-table table td.p-price::before {
+    content: "R$";
+}
+
+section.products-table table td.p-size, td.icon {
+    text-align: center;
+}
+
+section.products-table table td.icon span {
+    cursor: pointer;
+}
+/*Products Table*/
+
+
+/*
+Products Register
+*/
+section.products-register {
+    width: 50%;
+    min-width: 300px;
+    align-self: center;
+
+    display: none;
+    flex-flow: column;
+    justify-content: center;
+}
+
+section.products-register h2 {
+    font-size: 2em;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+section.products-register form {
+    padding: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+section.products-register label {
+    display: none;
+}
+
+section.products-register label.show {
+    display: block;
+}
+
+section.products-register label.show::after {
+    content: ":";
+}
+
+section.products-register form input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="date"], input[type="number"] {
+    cursor: text;
+}
+
+section.products-register form input, select {
+    background-color: var(--shadow01);
+    margin: 0 0 .5rem 0;
+    padding: .3rem;
+    border-radius: .5rem;
+}
+
+section.products-register form div.register-products-buttons {
+    padding: 1rem .5rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+section.products-register form div.register-products-buttons button {
+    background-color: var(--color01);
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+section.products-register form div.register-products-buttons button:hover {
+    background-color: var(--color03);
+    color: var(--font-color01);
+}
+/*Products Register*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+Change Adm
+*/
+input#users-table, input#products-table, input#products-register {
+    display: none;
+}
+input#users-table:checked ~ section.users-table {
+    display: flex;
+}
+input#products-table:checked ~ section.products-table {
+    display: flex;
+}
+input#products-register:checked ~ section.products-register {
+    display: flex;
+}
+/*Change Adm*/
+
+/*
+Change Login Adm
+*/
+input#login-adm-button {
+    display: none;
+}
+input#login-adm-button:checked ~ div.login-adm{
+    display: none;
+}
+input#login-adm-button:checked ~ div.page-adm{
+    display: flex;
+}
+/*Change Login Adm*/
+
+
+
+@media screen and (max-width: 605px) {
+    div.page-adm nav {
+        flex-flow: column;
+    }
+
+    section.products-table {
+        justify-content: flex-start;
+    }
+}
+
+

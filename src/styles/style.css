@@ -5,6 +5,9 @@
     --color02: #88ddfc;
     --color03: #F8CEE4;
     --font-color01: white;
+    --shadow01: rgba(0, 0, 0, 0.050);
+    --shadow02: rgba(0, 0, 0, 0.100);
+    --shadow03: rgba(0, 0, 0, 0.200);
     --main-font: Arial, Helvetica, sans-serif;
 }
 
@@ -14,12 +17,14 @@ Index
 */
 main.index {
     color: var(--font-color01);
+    padding: 1rem 0;
+
     display: flex;
     align-items: center;
 }
 
 main.index section {
-    background-color: rgba(0, 0, 0, 0.100);
+    background-color: var(--shadow02);
     margin: 0 auto;
     padding: 10px;
     border-radius: 20px;

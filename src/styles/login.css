@@ -5,12 +5,17 @@
     --color02: #88ddfc;
     --color03: #F8CEE4;
     --font-color01: white;
+    --shadow01: rgba(0, 0, 0, 0.050);
+    --shadow02: rgba(0, 0, 0, 0.100);
+    --shadow03: rgba(0, 0, 0, 0.200);
     --main-font: Arial, Helvetica, sans-serif;
 }
 
 
 /*login and register*/
 main.login {
+    padding: 1rem 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,14 +116,14 @@ main.login input[type="text"], input[type="email"], input[type="password"], inpu
 }
 
 main.login form input, select {
-    background-color: rgba(211, 211, 211, 0.400);
+    background-color: var(--shadow01);
     margin: 0 0 10px 0;
     padding: 5px;
     border-radius: .5em;
 }
 
 main.login form div.remember input + label::before {
-    color: rgba(255, 255, 255, 0);
+    color: transparent;
     display: inline-block;
     width: 1em;
     height: 1em;

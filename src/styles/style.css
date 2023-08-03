@@ -71,17 +71,6 @@ main.about p {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /*
 Details
 */
@@ -129,32 +118,10 @@ main.details img {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*landscape*/
 @media screen and (min-aspect-ratio: 115/100) {
     main.index section {
         margin: 0 0 0 30px;
     }
 }
-
-
-
-
-
 

@@ -11,6 +11,40 @@
 }
 
 
+div.page-adm {
+    background-color: var(--font-color01);
+    width: calc(100vw - 3rem);
+    max-width: 700px;
+    height: 700px;
+    margin: 0 auto;
+    padding: 1.5rem;
+
+    display: none;
+    flex-flow: column;
+    align-items: center;
+}
+
+div.page-adm nav {
+    background-color: var(--color02);
+    color: var(--font-color01);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5rem;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+div.page-adm nav label {
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+}
+
+div.page-adm nav label:hover {
+    background-color: var(--shadow02);
+}
+
+
 /*
 Login Adm
 */
@@ -107,44 +141,6 @@ div.login-adm section.login-adm form label.submit-button:hover {
 }
 /*Login*/
 /*Login Adm*/
-
-
-
-
-
-div.page-adm {
-    background-color: var(--font-color01);
-    width: calc(100vw - 3rem);
-    max-width: 700px;
-    height: 700px;
-    margin: 0 auto;
-    padding: 1.5rem;
-
-    display: none;
-    flex-flow: column;
-    align-items: center;
-}
-
-div.page-adm nav {
-    background-color: var(--color02);
-    color: var(--font-color01);
-    text-align: center;
-    width: 100%;
-    margin-bottom: 5rem;
-
-    display: flex;
-    justify-content: space-around;
-}
-
-div.page-adm nav label {
-    padding: .5rem 1.5rem;
-    cursor: pointer;
-}
-
-div.page-adm nav label:hover {
-    background-color: var(--shadow02);
-}
-
 
 
 
@@ -307,15 +303,6 @@ section.products-register form div.register-products-buttons button:hover {
     color: var(--font-color01);
 }
 /*Products Register*/
-
-
-
-
-
-
-
-
-
 
 
 
